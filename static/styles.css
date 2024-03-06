@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+}
+.container {
+    width: 300px;
+    padding: 16px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.block-container {
+    width: 80%;
+    padding: 16px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+input[type=text], input[type=password], input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+input[type=submit] {
+    background-color: #0707f0a4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 280px;
+    border-radius: 4px;
+}
+input[type=submit]:hover {
+    background-color: #1313efa4;
+}
+
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: 0.5s; /* Smooth transition effect */
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #1313efa4;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidenav .stop-all {
+    padding: 6px 8px 6px 8px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 2px solid #1313efa4;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.main-content {
+    transition: margin-left 0.5s;
+    padding: 16px;
+    margin-left: 250px; /* Same as the width of the sidenav */
+}
+
+.form-row {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+.form-row:not(:first-child) {
+    justify-content: flex-start;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+select, input[type=number] {
+    padding: 5px;
+}
+
+select[multiple], input[type=number] {
+    padding: 5px;
+    width: 100%; /* You might want to set a specific width or make it full width */
+    height: auto; /* Adjust the height as needed, or set a specific height */
+}
+
+.form-group select {
+    margin-bottom: 10px; /* Add space below dropdown for multiple selections */
+}
+
+
+.form-group.multiple-select {
+    width: 50%; /* maybe change the  width as needed for the multiple select dropdown */
+}
+
+
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

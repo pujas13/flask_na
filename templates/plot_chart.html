@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>Plot Chart</h1>
+    <form action="/plot_chart" method="post">
+        <div class="block-container">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="numDataPoints">No. of data points:</label>
+                <input type="number" id="numDataPoints" name="numDataPoints" value="300">
+            </div>
+            <div class="form-group">
+                <label for="periodicity">Periodicity:</label>
+                <input type="number" id="periodicity" name="periodicity" value="5">
+            </div>
+            <div class="form-group">
+                <label for="time_type">Time type:</label>
+                <select id="time_type" name="time_type">
+                    <option value="minute">Minute</option>
+                    <option value="hour">Hour</option>
+                    <option value="day">Day</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="active_instrument" name="active_instrument">Active Instruments:</label>
+                <select id="active_instrument" name="active_instrument">
+                    <!--options to be generated from the datbase-->
+                    <option value="instrument1">Instrument 1</option>
+                    <option value="instrument2">Instrument 2</option>
+                    <option value="instrument3">Instrument 3</option>
+                </select>
+            </div>
+            <div class="form-group multiple-select">
+                <label for="lean_instrument" name="lean_instrument">Lean Instruments:</label>
+                <select id="lean_instrument" name="lean_instrument" multiple>
+                    <!--options to be generated from the datbase-->
+                    <option value="lean_instrument1">Lean Instrument 1</option>
+                    <option value="lean_instrument2">Lean Instrument 2</option>
+                    <option value="lean_instrument3">Lean Instrument 3</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="activeCoeff">Coefficient:</label>
+                <input type="number" id="activeCoeff" name="activeCoeff" step="0.01" value="0.01">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="activeSpreadRatio">Active Spread Ratio:</label>
+                <input type="number" id="activeSpreadRatio" name="activeSpreadRatio" step="0.01" value="0.01">
+            </div>
+        </div>
+
+
+        <input type="submit" value="Plot Chart">
+    </form>
+</div>
+</div>
+
+{% endblock %}

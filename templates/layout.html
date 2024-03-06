@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Layout</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <div id="sidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <button class="stop-all">STOP ALL</button>
+            <a href="#Subscription">Subscription</a>
+            <a href="#Instruments">Instruments</a>
+            <a href="#MarketDepth">Market Depth</a>
+            <a href="{{ url_for('plot_chart') }}">Plot Chart</a>
+            <a href="#Legs">Legs</a>
+            <a href="#Groups">Groups</a>
+            <a href="#Pairs">Pairs</a>
+            <a href="#PriceAdjuster">Price Adjuster</a>
+            <a href="#TechnicalIndicator">Technical Indicator</a>
+            <a href="#Orders">Orders</a>
+            <a href="#Portfolio">Portfolio</a>
+            <a href="#BackorderTesting">Backorder Testing</a>
+            <a href="#Logout">Logout</a>
+            <!-- Add other navigation links -->
+        </div>
+        
+        <div class="main-content">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open</span>
+            <!-- Main content -->
+        </div>
+        
+        
+        <!-- <div class="sidenav">
+            <button class="stop-all">STOP ALL</button>
+            <a href="#Subscription">Subscription</a>
+            <a href="#Instruments">Instruments</a>
+            <a href="#MarketDepth">Market Depth</a>
+            <a href="{{ url_for('plot_chart') }}">Plot Chart</a>
+            <a href="#Legs">Legs</a>
+            <a href="#Groups">Groups</a>
+            <a href="#Pairs">Pairs</a>
+            <a href="#PriceAdjuster">Price Adjuster</a>
+            <a href="#TechnicalIndicator">Technical Indicator</a>
+            <a href="#Orders">Orders</a>
+            <a href="#Portfolio">Portfolio</a>
+            <a href="#BackorderTesting">Backorder Testing</a>
+            <a href="#Logout">Logout</a>
+        </div> -->
+        <div class="main-content">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementsByClassName("main-content")[0].style.marginLeft = "250px";
+            }
+        
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementsByClassName("main-content")[0].style.marginLeft= "0";
+            }
+        </script>
+    </body>
+</html>
